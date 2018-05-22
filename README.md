@@ -1,10 +1,12 @@
 # Bootstrap-3-tabs-fix
 
-Placing hyperlinks inside Bootstraps tabs confuses the code into thinking anything in the href is a tab reference. The error typically  looks like this:
+Placing hyperlinks inside Bootstrap's tabs confuses the code into thinking anything in the href is a tab reference and the error typically appears like:
 
 bootstrap.js:1729 Uncaught Error: Syntax error, unrecognized expression: 
 
-This fix creates new logic that first checks for the presence of a pound in the href (which we know is native to Bootstrap tabs). If found, the code proceeds as designed. If the pound is not detected, then the code treats this as a regular hyperlink. This fix is known to work with jQuery v1.11.3 and Bootstrap v3.1.1.
+This following fix creates new logic that first checks for the presence of a pound in the href (which we know is native to Bootstrap tabs). If found, the code proceeds as designed. If the pound is not detected, then the code treats this as a regular hyperlink. 
+
+This fix works with jQuery v1.11.3 and Bootstrap v3.1.1.
 
 # Code
 
